@@ -1,0 +1,3 @@
+The square root of 2 is 1.4142135623731 
+e to the power pi is 23.1406926327793 
+pi to the power e is 22.459157718361 
