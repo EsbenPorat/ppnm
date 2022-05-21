@@ -1,0 +1,7 @@
+The value of sqrt(-1) is 6.12e-17+1i, manually calculated to 1*i 
+The value of sqrt(i) is 0.707+0.707i , manually calculated to 0.7071 + 0.7071*i 
+The value of e^i is 0.54+0.841i, manually calculated to 0.540 + 0.841*i 
+The value of e^(i*pi) is -1+1.22e-16i, manually calculated to -1 
+The value of i^(-i) is 4.81+0i, manually calculated to 4.180 
+The value of ln(i) is 0+1.57i, manually calculated to 1.571*i 
+The value of sin(i*pi) is 0+11.5i, manually calculated to 11.549*i 
