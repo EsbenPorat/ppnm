@@ -1,0 +1,13 @@
+set terminal png
+
+set output "Erf.pyxplot.png"
+
+set xlabel "xvals"
+
+set ylabel "yvals"
+
+set title 'erf from -3 to 3'
+
+plot [-3:3][-1:1] 'data.txt' index 0 using 1:2 with lines
+
+exit

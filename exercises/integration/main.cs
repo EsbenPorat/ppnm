@@ -5,7 +5,7 @@ using static integrate;
 
 public static class integ{
 
-	public static double logsqrt(){		
+	public static double logsqrt(){
 		Func<double,double> f = x => Log(x)/Sqrt(x);
 		double result = quad(f,0,1); 
 		Write($"The integration yields the result {result} \n"); 
@@ -19,7 +19,8 @@ public static class integ{
 
 	public static int Main(){
 		for(double z=-3; z<=3; z+=0.05){
-			Write($"{z} {erf(z)}\n")
+			Write($"{z} {erf(z)}\n");
 		}
+		return 0;
 	}
 }

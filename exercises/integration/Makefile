@@ -1,4 +1,4 @@
-erf.plot.png: erf.plot.gpi data.txt
+erf.plot.png: plotinstructions.txt data.txt
 	cat $< | pyxplot
 
 data.txt: main.exe
