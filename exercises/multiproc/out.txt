@@ -1,0 +1,3 @@
+Calculated from 1 to 50, got 4.49920533832942 
+Calculated from 51 to 100, got 0.688172179310195 
+The total sum is 5.18737751763962 
