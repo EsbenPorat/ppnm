@@ -1,15 +1,11 @@
 all: out.txt
 	cat $<
 
-out.txt: epsilonminmax.exe epsilonmachine.exe
-	mono epsilonminmax.exe > out.txt
-	mono epsilonmachine.exe > out.txt
+out.txt: main.exe
+	mono $< > $@
 
-epsilonminmax.exe: epsilonminmax.cs
-	mcs epsilonminmax.cs
+main.exe: main.cs
+	mcs $<
 
-epsilonmachine.exe: epsilonmachine.cs
-	mcs epsilonmachine.cs
-
-.phoney clean:
-	rm -f out.txt epsilonmachine.exe epsilonminmax.exe
+clean:
+	rm -f *.txt

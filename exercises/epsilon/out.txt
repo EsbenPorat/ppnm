@@ -1,2 +1,15 @@
-My max int = 2147483647
-My min int = -2147483648
+---------------------------------------------------------------------------------------
+My maximum int is 2147483647. 
+My minimum int is -2147483648. 
+---------------------------------------------------------------------------------------
+My machine epsilon with double precision is 2.22044604925031E-16. 
+My machine epsilon with float precision is 1.192093E-07. 
+---------------------------------------------------------------------------------------
+sumA-1 = 0.000000e+000 should be 1.110223e-010 
+sumB-1 = 1.110223e-010 should be 1.110223e-010 
+This is due to the fact that epsilon is the smallest number that can be added to 1 and not give 1+epsilon = 1. 
+---------------------------------------------------------------------------------------
+If approx works, approx(1,1) should evaluate as True. It evaluates as True. 
+If approx works, approx(1,2) should evaluate as False. It evaluates as False. 
+If approx works, approx(1000,1001) should evaluate as False. It evaluates as False. 
+---------------------------------------------------------------------------------------
