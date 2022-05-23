@@ -18,12 +18,11 @@ public class mult{
 	}
 
 	public static int Main(){ 
-		int max = 100, subs = 2; 
+		int max = 1000000, subs = 6; 
 		for (int i=0; i<subs; i++) {
 			lambdathread(max,subs,i);
 		}
-		double totalSum = sum;
-		Write($"The total sum is {totalSum} \n");
+		Write("The total sum is not calculated :( \n");
 		return 0;
 	}
 }
