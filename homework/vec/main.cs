@@ -1,17 +1,42 @@
 using static System.Console;
+using static vec;
 
-vec testVectorOne = vec(double 1.0, double 1.5, double 2.0);
-vec testVectorTwo = vec(double 2.5, double 3.0, double 3.5);
-double testConstant = double 10.0;
+public static class vechomework{
+	public static void Main(){
+	// testvars and printing them
+		vec v1 = new vec(1.0, 1.0, 0.0);
+		vec v2 = new vec(0.0, 1.0, 1.0);
+		double c = 10.0;
 
-vec vectorFirstMultiple = testVectorOne*testConstant;
-vec constantFirstMultiple = testConstant*testVectorOne;
-vec addition = testVectorOne+testVectorTwo;
-vec subtraction = testVectorOne-testVectorTwo;
-vec negativeSign = -testVectorOne;
+		Write("Part A:\n");
+		Write("------------------------------ \n");
+		v1.print("v1 = ");
+		v2.print("v2 = ");
+		Write($"Constant c = {c} \n");
+		Write("-------\n");
+		
+		vec vecMul = v1*c;
+		vec conMul = c*v1;
+		vec add = v1+v2;
+		vec sub = v1-v2;
+		vec negSign = -v1;
+		
+		vecMul.print("v1 * c = ");
+		conMul.print("c * v1 = ");
+		add.print("v1 + v2 = ");
+		sub.print("v1 - v2 = ");
+		negSign.print("-v1 = ");
+		Write("------------------------------ \n");
 
-print(string vectorFirstMultiple);
-print(string constantFirstMultiple);
-print(string addition);
-print(string subtraction);
-print(string negativeSign);
+		double dot = v1.dot(v2);
+		vec cross = v1.cross(v2);
+		double norm = v1.norm();	
+
+		Write("Part B: \n");
+		Write($"v1 . v2 = {dot} \n");
+		cross.print("v1 x v2 = ");
+		Write($"norm(v1) = {norm} \n");
+		Write("------------------------------ \n");
+
+	}
+}

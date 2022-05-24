@@ -2,14 +2,12 @@ using static System.Console;
 
 //class statement 
 public class vec{
-	public double xcoord,ycoord,zcoord;
-	double static x = xcoord;
-       	double static y = ycoord;
-       	double static z = zcoord;
+	public double x,y,z;
 //constructors
 	public vec(){
 		x=0; y=0; z=0;
 	}
+
 	public vec(double a, double b, double c){
 		x=a;y=b;z=c;
 	}
@@ -29,7 +27,22 @@ public class vec{
 	public static vec operator-(vec v){
 		return new vec(-1*v.x, -1*v.y, -1*v.z);
 	}
+	
+	public double dot(vec v){
+		return this.x*v.x + this.y*v.y + this.z*v.z;
+	}
+	public vec cross(vec v){
+		return new vec((this.y*v.z - this.z*v.y), (this.z*v.x - this.x*v.z), (this.x*v.y - this.y*v.x));
+	}
+
+	public double norm(){
+		return this.x*this.x + this.y*this.y + this.z*this.z;
+	}
+
 //methods:
-	public void print(string s, vec v){Write(s);WriteLine($"{v.x} {v.y} {v.z}");}
-	public void print(){this.print("");}
+	public void print(string s){
+		Write(s);
+		Write($"{x} {y} {z} \n");
+	}	
 }
+	

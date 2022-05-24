@@ -1,8 +1,14 @@
-vec.dll: vectorclass.cs
-	mcs -target:library -out:vectorclass.dll vectorclass.cs
+all: out.txt
+	cat $<
 
-main.exe: main.cs vectorclass.dll
-	mcs -target:exe -out:main.exe -reference:vectorclass.dll vectorclass.cs
+out.txt: main.exe
+	mono $< > $@
 
-.phoney clean:
-		rm -f main.exe
+main.exe: main.cs vec.dll
+	mcs -target:exe -out:$@ -reference:vec.dll $<
+
+vec.dll: vec.cs
+	mcs -target:library -out:$@ $<
+
+clean:
+	rm -f *.exe *.dll
