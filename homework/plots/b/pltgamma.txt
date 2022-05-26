@@ -1,0 +1,10 @@
+set terminal png
+set output "gamma.pyxplot.png"
+set xlabel "gamma(x)"
+set ylabel 'x'
+set grid
+set key bottom right
+set title 'gamma function and tabulated values for comparison'
+plot [-5:5][-5:5] 'data.txt' index 0 using 1:2 with lines lw 1 color rgb(1,0,0) title "gamma(x)" 
+replot [-5:5][-5:5] 'tabulatedgamma.txt' index 0 using 1:2 with points lw 1 color rgb(0,1,1) title "tabulated values"
+exit

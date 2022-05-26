@@ -1,0 +1,10 @@
+set terminal png
+set output "lngamma.pyxplot.png"
+set xlabel "ln(gamma(x))"
+set ylabel 'x'
+set grid
+set key bottom right
+set title 'ln(gamma(x)) and tabulated values for comparison'
+plot [-5:5][-5:5] 'data.txt' index 0 using 1:3 with lines lw 1 color rgb(1,0,0) title "lngamma(x)"
+replot [-5:5][-5:5] 'tabulatedlngamma.txt' index 0 using 1:2 with points lw 1 color rgb(0,1,1) title "lngamma(x) tabulated values"
+exit
