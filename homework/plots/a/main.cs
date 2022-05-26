@@ -12,13 +12,8 @@ public static class plots{
 	} 
 
 	public static void Main(){
-		
-		
-		
-		
-		
 		for (double i=0; i<3.5; i+=0.02) {
-			
+			Write($"{i} {erf(i)} \n");
 		}
 		
 	}
