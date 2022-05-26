@@ -1,0 +1,10 @@
+set terminal png
+set output "erf.pyxplot.png"
+set xlabel "erf(x)"
+set ylabel 'x'
+set grid
+set key top left
+set title 'erf function and tabulated values for comparison'
+plot [-3:3][-1.1:1.1] 'data.txt' index 0 using 1:2 with lines lw 2.5 color rgb(0,0,1) title "erf(x)"
+replot [-3:3][-1.1:1.1] 'data.txt' index 0 using 1:3 with points lw 2.5 color rgb(1,0,0) title "erf(x) tabulated values"
+exit

@@ -1,6 +1,10 @@
+using System;
+using static System.Console;
+using static System.Math;
+
 public static class genlist{
-	public static void Main(){
-		var list = new genlist<double[]>
+	public static int Main(){
+		var list = new genlist<double[]>();
 		char[] delimiters = {' ','\t'};
 		var options = StringSplitOptions.RemoveEmptyEntries;		
 		for(string line = ReadLine(); line!=null; line = ReadLine()){
@@ -15,5 +19,6 @@ public static class genlist{
 			foreach(var number in numbers)Write($"{number:e} ");
 			WriteLine();	
 	        }
+		return 0;
 	}
 }
