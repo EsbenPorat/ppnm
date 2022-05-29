@@ -1,0 +1,6 @@
+
+The calculated half-life is ln(2) divided by the linear coefficient of the log plot fit. 
+It is 4.04828189712487 days, and the current value is about 3.6 days.
+The calculated error is the 1,1 index of the covariance matrix, which is +-0.0171926777257639 days.
+Which means the current value is *not* within the uncertainties of our fit!
+

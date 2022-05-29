@@ -1,0 +1,12 @@
+set terminal png
+set output "logfit.pyxplot.png"
+set xlabel "t [days]"
+set ylabel 'ln(Activty(t))'
+set grid
+set key below
+set title 'Least-squares fit of 1, $x$ to ln of radioactivity data'
+set xtics 0,2,16
+set ytics 0,1,5
+plot [0:16.1][0:5.1] 'out.txt' index 1 using 1:2:3 with yerrorbars pointtype 17 color rgb(0,0,0) title "Data points"
+replot [0:16.1][0:5.1] 'out.txt' index 3 using 1:2 with lines lw 1 color rgb(0,0,1) title "LS-fit"
+exit
