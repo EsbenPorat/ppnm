@@ -1,0 +1,12 @@
+set terminal png
+set output "3dgamma.pyxplot.png"
+set xlabel "Re(z)"
+set ylabel "Im(z)"
+set zlabel "Abs($\Gamma$(z))"
+set title "Complex Gamma-function"
+set grid
+set key below
+set view -10,10
+set size 8 square
+plot 3d [-5:5][-5:5][0:30] 'out.txt' index 0 using 1:2:3 with surface col black fillcol red
+exit

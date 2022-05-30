@@ -1,0 +1,1 @@
+Absolute value of complex Gamma-function plotted in pyxplot as 3dgamma.pyxplot.png. 
