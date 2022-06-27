@@ -1,0 +1,30 @@
+---Exam project #7: Symmetric rank-1 update of a size-n symmetric eigenvalue problem.---
+The random diagonal matrix, D:
+        33          0          0          0          0          0          0          0 
+         0         14          0          0          0          0          0          0 
+         0          0         56          0          0          0          0          0 
+         0          0          0         81          0          0          0          0 
+         0          0          0          0         98          0          0          0 
+         0          0          0          0          0         94          0          0 
+         0          0          0          0          0          0         39          0 
+         0          0          0          0          0          0          0         10 
+
+The random vector, u:
+         5          9          3          8         17         11         20          3 
+
+The resulting matrix to be diagonalized, A:
+        58         45         15         40         85         55        100         15 
+        45         95         27         72        153         99        180         27 
+        15         27         65         24         51         33         60          9 
+        40         72         24        145        136         88        160         24 
+        85        153         51        136        387        187        340         51 
+        55         99         33         88        187        215        220         33 
+       100        180         60        160        340        220        439         60 
+        15         27          9         24         51         33         60         19 
+
+The eigenvalues according to the roots of the scalar secular equation:
+      10.2       17.1       33.3       55.4       65.7       83.9       95.3   1.06e+03 
+
+The eigenvalues according to the Jacobi algorithm:
+      10.2       17.1       33.3       55.4       65.7       83.9       95.3   1.06e+03 
+

@@ -1,0 +1,13 @@
+set terminal png
+set output "timings.png"
+set xlabel "Dimension of A"
+set ylabel "Time [ms]"
+set title "Time data for Jacobi and Rank 1 update algorithms"
+set grid
+set key top left
+set xtics 0,25,200
+set ytics 0,50,500
+plot [0:200][0:500] 'timedata.txt' index 0 using 1:2 with points pointtype 1 pointsize 0.2 color rgb(0,0,1) title "Jacobi"
+replot [0:200][0:500] 'fitvals.txt' index 0 using 1:2 with lines lw 2 color rgb(0,0,1) title "Jacobi fit"
+replot [0:200][0:500] 'timedata.txt' index 0 using 1:3 with points pointtype 1 pointsize 0.2 color rgb(1,0,0) title "Rank 1 update"
+replot [0:200][0:500] 'fitvals.txt' index 0 using 1:3 with lines lw 2 color rgb(1,0,0) title "Rank 1 fit"
