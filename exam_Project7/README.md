@@ -4,8 +4,8 @@ Project number 7 was the "Symmetric rank-1 update of a size-n symmetric eigenval
 The matrix of interest, *A*, is an $n$ times $n$ matrix constructed from the sum of a diagonal matrix *D*, with elements ${d_1,...,d_n}$ and the outer product of a vector *u* of n random elements with itself multiplied by a factor $\sigma$.
 
 Finding roots of the scalar secular equation given in the eigenvalues chapter of the book (eq. 21),
-$$1+\sum_{i=1}^m{\frac{\sigma u^2_i}{d_i - \lambda}} = 0$$,
-gives us the $n$ values of $\lambda$ corresponding to the eigenvalues of *A*. The Newton-Raphson method is used for this.
+$$1+\sum_{i=1}^n{\frac{\sigma u^2_i}{d_i - \lambda}} = 0$$,
+gives us the n values of $\lambda$ corresponding to the eigenvalues of *A*. The Newton-Raphson method is used for this.
 
 The Jacobi eigenvalue algorithm implemented in the Eigenvalues homework is used to check the found eigenvalues' validity.
 
